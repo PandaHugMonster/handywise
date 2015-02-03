@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.18.3 -->
+<interface>
+  <requires lib="gtk+" version="3.12"/>
+  <object class="GtkButton" id="AboutButton">
+    <property name="label">gtk-properties</property>
+    <property name="visible">True</property>
+    <property name="can_focus">True</property>
+    <property name="receives_default">True</property>
+    <property name="relief">half</property>
+    <property name="use_stock">True</property>
+    <property name="focus_on_click">False</property>
+    <property name="always_show_image">True</property>
+  </object>
+  <object class="GtkTextBuffer" id="contentbuffer"/>
+  <object class="GtkApplicationWindow" id="BaseWindow">
+    <property name="width_request">300</property>
+    <property name="height_request">200</property>
+    <property name="can_focus">False</property>
+    <property name="window_position">center</property>
+    <property name="default_width">400</property>
+    <property name="default_height">400</property>
+    <property name="icon">Imnotyoungenoughicon.svg</property>
+    <property name="show_menubar">False</property>
+    <child>
+      <object class="GtkScrolledWindow" id="scrolledwindow1">
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <child>
+          <object class="GtkTextView" id="textview1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="border_width">20</property>
+            <property name="editable">False</property>
+            <property name="wrap_mode">word</property>
+            <property name="justification">center</property>
+            <property name="cursor_visible">False</property>
+            <property name="buffer">contentbuffer</property>
+            <property name="accepts_tab">False</property>
+            <property name="input_hints">GTK_INPUT_HINT_UPPERCASE_SENTENCES | GTK_INPUT_HINT_INHIBIT_OSK | GTK_INPUT_HINT_NONE</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
